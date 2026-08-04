@@ -27,6 +27,7 @@
 | [CVE-2018-19664](cve/CVE-2018-19664.md) | CWE-125 | OOB Read | libjpeg-turbo | 안민기 |
 | [CVE-2019-7317](cve/CVE-2019-7317.md) | CWE-416 | UAF | libpng | 오동규 |
 | [CVE-2022-34526](cve/CVE-2022-34526.md) | CWE-787 | OOB Write | libtiff | 오동규 |
+| [CVE-2023-25433](cve/CVE-2023-25433.md) | CWE-120 | Heap Buffer Overflow | libtiff | 안민기 |
 | [CVE-2023-52355](cve/CVE-2023-52355.md) | CWE-400 | OOM | libtiff | 안민기 |
 | [CVE-2023-52356](cve/CVE-2023-52356.md) |  |  | libtiff | 유창하 |
 | [CVE-2023-6277](cve/CVE-2023-6277.md) | CWE-400 | OOM | libtiff | 이화진 |
