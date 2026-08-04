@@ -7,12 +7,14 @@
 <!-- CVE_TABLE_START -->
 | CVE | CWE | 취약점 | 대상 | 분석자 |
 |-----|-----|--------|------|--------|
-| [CVE-2022-34526](CVE-2022-34526.md) | CWE-787 | OOB Write | libtiff | 동규 오 |
-| [CVE-2019-7317](CVE-2019-7317.md) | CWE-416 | UAF | libpng | 동규 오 |
+| [CVE-2018-19664](CVE-2018-19664.md) | CWE-125 | OOB Read | libjpeg-turbo | 안민기 |
+| [CVE-2019-7317](CVE-2019-7317.md) | CWE-416 | UAF | libpng | 오동규 |
+| [CVE-2022-34526](CVE-2022-34526.md) | CWE-787 | OOB Write | libtiff | 오동규 |
 | [CVE-2023-52355](CVE-2023-52355.md) | CWE-400 | OOM | libtiff | 안민기 |
-| [CVE-2023-6277](CVE-2023-6277.md) | CWE-400 | OOM | libtiff | HwaJin |
-| [CVE-2025-9900](CVE-2025-9900.md) | CWE-123 | OOB Write | libtiff | HwaJin |
-| [CVE-2023-52356](CVE-2023-52356.md) | - | - | libtiff | 유창하 |
+| [CVE-2023-52356](CVE-2023-52356.md) |  |  | libtiff | 유창하 |
+| [CVE-2023-6277](CVE-2023-6277.md) | CWE-400 | OOM | libtiff | 이화진 |
+| [CVE-2025-9900](CVE-2025-9900.md) | CWE-123 | OOB Write | libtiff | 이화진 |
+
 <!-- CVE_TABLE_END -->
 
 ## 분석 형식
