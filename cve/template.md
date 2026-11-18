@@ -4,6 +4,19 @@ cwe: CWE-XXX
 vulnerability: (OOB Write / UAF / OOM / Integer Overflow / ...)
 target: (libtiff / libpng / libjpeg-turbo)
 author: 이름
+# ===== 구조화 필드 (DB / targeted fuzzing용) =====
+# 값은 한 줄로 쓴다. 값에 콜론(:)이나 #이 들어가면 큰따옴표로 감싼다. 모르면 비워둔다.
+category:            # Init / 메타데이터 파싱 / 디코딩 / 인코딩 / 메모리/자원 관리 / 에러 처리 중 하나
+vuln_function:       # 취약점이 실제로 발생하는 함수 (예: _TIFFVGetField)
+vuln_file:           # 해당 함수가 있는 파일 (예: libtiff/tif_dir.c)
+entry_point:         # 외부에서 들어오는 API/도구 (예: tiffcrop, png_image_begin_read_from_memory)
+trigger_path:        # entry_point → ... → vuln_function 호출 흐름
+input_manipulation:  # 입력 파일의 어떤 태그/청크/마커를 어떻게 조작하는지
+build_condition:     # 재현에 필요한 빌드 조건 (예: --disable-zlib), 없으면 비움
+root_cause_pattern:  # 근본 원인을 한 줄로 (자유 서술, 데이터가 쌓이면 분류 예정)
+patch_type:          # 검증 추가 / 크기 계산 수정 / 버퍼 확장 / 로직 제거 / 기타
+poc:                 # none / public / reproduced
+verified_by:         # diff와 재현으로 내용을 검증한 사람 (AI 초안이면 검증 전까지 비움)
 ---
 
 # CVE-YYYY-NNNNN (라이브러리 이름)
