@@ -6,7 +6,16 @@ target: (libtiff / libpng / libjpeg-turbo)
 author: 이름
 # ===== 구조화 필드 (DB / targeted fuzzing용) =====
 # 값은 한 줄로 쓴다. 값에 콜론(:)이나 #이 들어가면 큰따옴표로 감싼다. 모르면 비워둔다.
-category:            # Init / 메타데이터 파싱 / 디코딩 / 인코딩 / 메모리/자원 관리 / 에러 처리 중 하나
+# --- 분류 (어디서 + 어떤) ---
+# stage: 취약 코드가 속한 처리 단계. 라이브러리 핵심 파이프라인이 아니면(도구 로직, 보조 포맷 입출력 등) 기타
+# weakness_class: 실제로 일어난 결과로 분류. 근거 우선순위 = 재현(sanitizer 출력) > 코드 분석 > NVD CWE(참고)
+#   메모리 경계 위반: heap/stack/global-buffer-overflow (READ/WRITE)
+#   수명 관리 오류: use-after-free, stack-use-after-return/scope, double-free
+#   자원 고갈: 거대 할당, OOM, 메모리 누수, 무한 루프/timeout
+#   기타: NULL 역참조, 0으로 나누기, 미초기화 메모리, assertion 실패 등 (비슷한 게 2~3개 쌓이면 새 묶음으로 승격)
+#   원인(정수 오버플로우 등)은 root_cause_pattern에, 결과가 여럿이면 처음 관찰된 것으로
+stage:               # Init / 메타데이터 파싱 / 디코딩 / 인코딩 / 기타
+weakness_class:      # 메모리 경계 위반 / 수명 관리 오류 / 자원 고갈 / 기타
 vuln_function:       # 취약점이 실제로 발생하는 함수 (예: _TIFFVGetField)
 vuln_file:           # 해당 함수가 있는 파일 (예: libtiff/tif_dir.c)
 entry_point:         # 외부에서 들어오는 API/도구 (예: tiffcrop, png_image_begin_read_from_memory)
