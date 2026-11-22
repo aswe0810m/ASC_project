@@ -30,10 +30,14 @@
 | [CVE-2020-17541](cve/CVE-2020-17541.md) | CWE-787 | OOB Write | libjpeg-turbo | 오동규 |
 | [CVE-2022-34526](cve/CVE-2022-34526.md) | CWE-787 | OOB Write | libtiff | 오동규 |
 | [CVE-2023-25433](cve/CVE-2023-25433.md) | CWE-120 | Heap Buffer Overflow | libtiff | 안민기 |
+| [CVE-2023-2804](cve/CVE-2023-2804.md) | CWE-125 | OOB Read | libjpeg-turbo | 오동규 |
 | [CVE-2023-52355](cve/CVE-2023-52355.md) | CWE-400 | OOM | libtiff | 안민기 |
 | [CVE-2023-52356](cve/CVE-2023-52356.md) |  |  | libtiff | 유창하 |
 | [CVE-2023-6277](cve/CVE-2023-6277.md) | CWE-400 | OOM | libtiff | 이화진 |
+| [CVE-2025-64505](cve/CVE-2025-64505.md) | CWE-125 | OOB Read | libpng | 오동규 |
+| [CVE-2025-65018](cve/CVE-2025-65018.md) | CWE-122 | Heap Buffer Overflow | libpng | 오동규 |
 | [CVE-2025-9900](cve/CVE-2025-9900.md) | CWE-123 | OOB Write | libtiff | 이화진 |
+| [CVE-2026-25646](cve/CVE-2026-25646.md) | CWE-126 | OOB Read | libpng | 오동규 |
 
 <!-- CVE_TABLE_END -->
 
